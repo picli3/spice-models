@@ -1,0 +1,27 @@
+* NDP606BE ELECTRICAL MODEL (TO-220 N-Ch DMOS)
+* -------------------------
+.SUBCKT  NDP606BE/FAI  20  10  30
+Rg     10    1    3
+M1      2    1    3    3    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS (VTO={3.4*{-0.00264*TEMP+1.066}}   KP={-0.03*TEMP+20.25}
++  THETA=0.056   VMAX=1.4E5  LEVEL=3)        
+Cgs     1    3    1154p
+Rd     20    4    4m
+Dds     3    4    DDS
+.MODEL     DDS    D(BV={60*{0.00088*TEMP+0.978}}   M=0.377  CJO=1083p   VJ=1.22)
+Dbody   3   20    DBODY
+.MODEL   DBODY    D(IS=1.4E-13   N=1   RS=37.9m   TT=55n)
+Ra      4    2    10m
+Rs      3    5    1.37m
+Ls      5    30   5n
+M2      1    8    6    6   INTER
+E2      8    6    4    1   2
+.MODEL   INTER    NMOS(VTO=0  KP=10   LEVEL=1)
+Cgdmax  7    4    2100p
+Rcgd    7    4    10meg
+Dgd     6    4    DGD
+Rdgd    4    6    10meg
+.MODEL     DGD    D(M=0.5   CJO=2653p   VJ=0.193)
+M3      7    9    1    1   INTER
+E3      9    1    4    1   -2
+.ENDS 

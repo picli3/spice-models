@@ -1,0 +1,40 @@
+.title KiCad schematic
+.include "/home/maykol/Documentos/spice/1N4007.REV0.LIB"
+.include "/home/maykol/Documentos/spice/2n5401.lib"
+.include "/home/maykol/Documentos/spice/Zener-Diodes_2.mod"
+.save all
+.probe alli
+*.dc R22 1 5k 10
+.control
+dc R8 1 5k 10
+set format y '%.0f'
+gnuplot Vo i(r8)
++ title 'Corriente en funcion de resistencia'
++ xlabel 'Resistencia'
++ ylabel 'Corriente (A)'
++ ylimit 0.0015 0.003
+.endc
+Q8 /VC /VB /VE 2N5401
+R20 /VO2 -50V 3.3k
+R17 /VC /VO2 2.5k
+V4 GND -50V DC 50 
+V3 +50V GND DC 50 
+R12 /VO3 -50V 3.3k
+Q5 A /VB2 /VE2 2N5401
+R8 A /VO3 2.5k
+R9 +50V /VE2 340
+R10 /VE2 B 1k
+Q4 /VB2 B +50V 2N5401
+R11 /VB2 GND 15k
+R19 +50V /VZ 10k
+R21 /VZ /VM 27k
+R23 /VO1 -50V 3.3k
+R22 /VM /VO1 2.5k
+C9 /VZ GND 10u
+XD4 GND /VZ DI_BZT52C18LP
+D2 /VD /VB D1n4007
+C8 +50V /VB 10u
+D1 +50V /VD D1n4007
+R16 /VB GND 15k
+R14 +50V /VE 280
+.end

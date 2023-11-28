@@ -1,0 +1,15 @@
+.title KiCad schematic
+V1 vi GND dc 10 ac 1 sin(0 10 1k 0 0)
+C1 GND vo 10u
+R1 vo GND 2
+L1 vi vo 1.8m
+C2 vo_2 vi 5.4u
+L2 vo_2 GND 0.6m
+R2 vo_2 GND 2
+.control
+ac oct 20K 1 20K
+*plot vdb(vo_2)-vdb(vo)
+plot vdb(vo)-vdb(vo_2) vdb(vo) vdb(vo_2) ylimit -3 80
+plot 180/PI*phase(v(vo))-180/PI*phase(v(vo_2))
+.endc
+.end

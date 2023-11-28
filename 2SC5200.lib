@@ -1,0 +1,53 @@
+*********************************************************************
+*  (C)  Copyright 2017 Toshiba Electronic Devices & Storage Corporation
+*  Date:                19/09/2017
+*  File Name:           2SC5200.lib
+*  Part Number:         2SC5200
+*  Parameter Ver.:      Ver.1
+*  Simulator:           PSpice
+*  Model Call Name:     2SC5200
+*  TNOM:                25 degree
+*  Pin Assign:          1=Collector 2=Base 3=Emitter
+*
+* Operation of this model has been verified only on the OrCAD.
+*********************************************************************
+.SUBCKT 2SC5200 1 2 3
+Q1 1 2 3 3 2SC5200_BJT
+.MODEL 2SC5200_BJT NPN(
++ LEVEL = 1
++ IS = 2.1586e-012
++ BF = 220
++ NF = 1
++ VAF = 100
++ IKF = 50
++ ISE = 2.5e-012
++ NE = 1.27
++ BR = 28
++ NR = 1
++ VAR = 10
++ IKR = 2
++ ISC = 3e-010
++ NC = 1.5
++ NK = 1.12
++ RE = 0.012
++ RB = 0.8
++ RC = 0.01
++ CJE = 8e-010
++ VJE = 0.75
++ MJE = 0.33
++ CJC = 4.8152e-010
++ VJC = 0.75
++ MJC = 0.33
++ FC = 0.5
++ TF = 2.3617e-009
++ XTF = 10
++ VTF = 2
++ ITF = 1
++ PTF = 0
++ TR = 10E-09
++ EG = 1.11
++ XTB = 3
++ XTI = 5.9601
++ TRC1 = 0
++ TNOM = 25)
+.ENDS

@@ -1,0 +1,133 @@
+.title KiCad schematic
+.include "/home/maykol/Documentos/spice/1N4007.REV0.LIB"
+.include "/home/maykol/Documentos/spice/2N5551.LIB"
+.include "/home/maykol/Documentos/spice/2SA1943.lib"
+.include "/home/maykol/Documentos/spice/2SC5200.lib"
+.include "/home/maykol/Documentos/spice/2n5401.lib"
+.include "/home/maykol/Documentos/spice/MJE340.lib"
+.include "/home/maykol/Documentos/spice/MJE350.LIB"
+.include "/home/maykol/Documentos/spice/Zener-Diodes_2.mod"
+.model Q6.Qmje340 NPN
++                 is=1.03431e-13
++                 bf=172.974
++                 nf=0.939811
++                 vaf=27.3487
++                 ikf=0.0260146
++                 ise=44.8447p
++                 ne=1.61605
++                 br=16.6725
++                 nr=0.796984
++                 var=6.11596
++                 ikr=0.10004
++                 isc=1.00199e-13
++                 nc=1.99995
++                 rb=1.47761
++                 irb=0.2
++                 rbm=1.47761
++                 re=0.0001
++                 rc=1.42228
++                 cje=10p
++                 vje=0.75
++                 mje=0.33
++                 tf=1n
++                 xtf=1
++                 vtf=10
++                 itf=0.01
++                 ptf=0
++                 cjc=10p
++                 vjc=0.75
++                 mjc=0.33
++                 xcjc=0.9
++                 tr=100n
++                 cjs=0
++                 vjs=0.75
++                 mjs=0.5
++                 xtb=2.70726
++                 eg=1.206
++                 xti=1
++                 fc=0.5
++                 kf=0
++                 af=1
+.model Q5.Qmje350 PNP
++                 is=6.01619e-15
++                 bf=157.387
++                 nf=0.910131
++                 vaf=23.273
++                 ikf=0.0564808
++                 ise=4.48479p
++                 ne=1.58557
++                 br=0.1
++                 nr=1.03823
++                 var=4.14543
++                 ikr=0.0999978
++                 isc=1.00199e-13
++                 nc=1.98851
++                 rb=0.1
++                 irb=0.202965
++                 rbm=0.1
++                 re=0.0710678
++                 rc=0.355339
++                 cje=10p
++                 vje=0.75
++                 mje=0.33
++                 tf=1n
++                 xtf=1
++                 vtf=10
++                 itf=0.01
++                 ptf=0
++                 cjc=10p
++                 vjc=0.75
++                 mjc=0.33
++                 xcjc=0.9
++                 tr=100n
++                 cjs=0
++                 vjs=0.75
++                 mjs=0.5
++                 xtb=1.03638
++                 eg=1.206
++                 xti=3.8424
++                 fc=0.5
++                 kf=0
++                 af=1
+.save all
+.probe alli
+R7 vzs ve_2 24k
+R4 Vpn -VCC 2.7k
+R5 Net-_Q4-C_ -VCC 2.7k
+C5 Net-_C5-Pad1_ GND 47u
+R10 Net-_Q2-B_ Net-_C5-Pad1_ 470
+Q4 Net-_Q4-C_ Net-_Q2-B_ ve_2 2N5401
+R6 ve_1 vzi 24k
+XQ8 vbq8 -VCC -B 2SA1943
+R17 OUT -B 100
+R18 Net-_D3-K_ Net-_D1-A_ 10
+D1 Net-_D1-A_ vbq8 D1n4007 m=0.5
+R19 GND OUT 10k
+C8 vbq8 -VCC 47n
+R14 Net-_Q6-E_ -VCC 56
+Q6 vbq8 Vpn Net-_Q6-E_ Q6.Qmje340
+R8 vzs +VCC 10k
+V1 +VCC GND 50
+R1 VB GND 27k
+C1 vi VB 1u
+V2 GND -VCC DC 50 
+V3 vi GND DC 0 SIN( 0 1 1k 0 0 0 1 ) AC 1 
+C3 vzs GND 470u
+XD2 GND vzs DI_BZT52C24LP
+XQ7 vbq7 +VCC +B 2SC5200
+C7 +VCC vbq7 47n
+D3 vbq7 Net-_D3-K_ D1n4007 m=0.5
+R12 +VCC Net-_Q5-E_ 56
+R16 +B OUT 100
+Q5 vbq7 Vpp Net-_Q5-E_ Q5.Qmje350
+R3 +VCC Net-_Q2-C_ 2.7k
+Q2 Net-_Q2-C_ Net-_Q2-B_ ve_1 2N5551
+Q1 Vpp VB ve_1 2N5551
+R2 +VCC Vpp 2.7k
+R11 Net-_Q2-B_ OUT 47k
+Q3 Vpn VB ve_2 2N5401
+R9 vzi -VCC 10k
+C2 VB GND 220p
+XD4 vzi GND DI_BZT52C24LP
+C4 GND vzi 470u
+.end

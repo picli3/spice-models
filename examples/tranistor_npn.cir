@@ -1,0 +1,31 @@
+.title KiCad schematic
+.include "/home/maykol/Documentos/spice/2n3906.mod"
+R2 vcc_n out 3.3k
+R1 ve vcc_p 12k
+Q2 vb2 Net-_Q2-Pad2_ ve 2N3906
+R3 vcc_n Net-_Q2-Pad2_ 3.3k
+Q1 vb1 out ve 2N3906
+V3 GND vcc_n dc 25
+V2 vcc_p GND dc 25
+V1 vb1 vb2 dc 0 ac 0.5 sin(0 500m 1000)
+.save @r2[i]
+.save @r1[i]
+.save @q2[ib]
+.save @q2[ic]
+.save @q2[ie]
+.save @r3[i]
+.save @q1[ib]
+.save @q1[ic]
+.save @q1[ie]
+.save @v3[i]
+.save @v2[i]
+.save @v1[i]
+.save V(vcc_p)
+.save V(vcc_n)
+.save V(out)
+.save V(vb1)
+.save V(vb2)
+.save V(ve)
+.save V(Net-_Q2-Pad2_)
+.op
+.end

@@ -1,0 +1,69 @@
+*DEVICE=IXTH10P50,PMOS
+
+* IXTH10P50 PMOS model
+* updated using Model Editor release 9.2.1 on 10/24/03 at 17:43
+* The Model Editor is a PSpice product hmt.
+
+.MODEL NMOS-GEN NMOS LEVEL=3
++ L=2.0000E-6
++ W=35
++ KP=522.45E-9
++ RS=10.000E-3
++ VTO=-5.1807
++ TOX=2.0000E-6
++ CGSO=285.71E-18
++ CGDO=5.0315E-12
++ CBD=3.6162E-9
++ MJ=.62777
++ PB=.59818
++ RG=10.000E-3
++ IS=170.28E-9
++ GAMMA=0
++ KAPPA=0
++ UO=300
+
+.MODEL ZXMN3F30FHTA VDMOS NCHAN 
++ Vds =200 
++ VTO = 3
++ KP =10 
++ Lambda =0
++ Mtriode =1 
++ Ksubthres =100m 
++ Rs =0
++ Rb =0
++ Rd =0 
++ Rds =200e6
++ Cgdmax =0 
++ Cgdmin =0 
++ A =1 
++ Cgs =0 
++ Cjo =0
++ Is =1e-14 
++ BV =30 
++ IBV =1.0e-10 
++ NBV =1 
++ TT =0
+
+.model 2N7002 VDMOS NCHAN
++ Rg=3
++ Vto=1.6
++ Rd=0 
++ Rs=.75
++ Rb=.14 
++ Kp=.17
++ mtriode=1.25
++ Cgdmax=80p 
++ Cgdmin=12p
++ Cgs=50p
++ Cjo=50p
++ Is=.04p
++ mfg=Fairchild
++ Vds=60
++ Ron=2 
++ Qg=1.5n
+
+.MODEL Q_NMOS NMOS LEVEL=1
++ KP = 200U
++ GAMMA = 0.9
++ Lambda = 0
++ VTO = 1

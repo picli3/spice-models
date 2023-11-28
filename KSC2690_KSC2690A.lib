@@ -1,0 +1,51 @@
+* KSC2690/KSC2690A NPN EPITAXIAL SILICON TRANSISTOR
+*-----------------------------------------------------------
+* AUDIO FREQUENCY, HIGH FREQUENCY POWER AMPLIFIER
+* Complement to KSA1220/KSA1220A
+* PARAMETER MODELS EXTRACTED FROM MEASURED DATA: KSC2690A-O
+*-----------------------------------------------------------
+* If QCO and RCO are set to zero, this model applies to
+* the Gummel-Poon model LEVEL 1.
+* If IBC and IBE are specified, they are used instead of IS.
+*-----------------------------------------------------------
+
+.MODEL KSC2690_KSC2690A NPN ( LEVEL=2
++  IS    =1.7783E-13      
++  BF    =132.5
++  NF    =1.0 
++  BR    =8.495
++  NR    =1.005
+*+ IBC   =1.7783E-13 
+*+ IBC   =1.7783E-13 
++  ISE   =1.9953E-13
++  NE    =1.5
++  ISC   =1.5849E-9
++  NC    =1.98
++  VAF   =580.75
++  VAR   =18.15
++  IKF   =4.0271
++  IKR   =0.0120
++  RB    =2.98
++  RBM   =0.001
++  IRB   =0.6396
++  RE    =0.0909
++  RC    =1.4705
++  QCO   =0.68
++  RCO   =3.6239
++  VO    =6.587
++  GAMMA =2.8216E-7
++  CJE   =4.0082E-10
++  VJE   =0.6696
++  MJE   =0.3296
++  FC    =0.5
++  CJC   =6.0404E-11
++  VJC   =0.5
++  MJC   =0.4266
++  XCJC  =0.4955   
++XTB=1.2590
++EG=1.2277
++XTI=3.0)
+
+*---------------------------------------------------------
+* FAIRCHILD    CASE: TO-126   PID:KSC2690A-O
+* 2000-03-30 CREATION

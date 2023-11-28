@@ -1,0 +1,70 @@
+*DEVICE=PMOS GENERIC
+
+.MODEL PMOS-GEN PMOS LEVEL=3
++ L=2.0000E-6
++ W=35
++ KP=522.45E-9
++ RS=10.000E-3
++ RD=.88276
++ VTO=-5.1807
++ TOX=2.0000E-6
++ CGSO=285.71E-18
++ CGDO=5.0315E-12
++ CBD=3.6162E-9
++ MJ=.62777
++ PB=.59818
++ IS=170.28E-9
++ GAMMA=0
++ KAPPA=0
++ UO=300
+
+.MODEL IXTH48P20P VDMOS Pchan 
++ Vds =200 
++ VTO = -4 
++ KP =10 
++ Lambda =5m
++ Mtriode =0.3 
++ Ksubthres =120m 
++ Rs =10m 
++ Rd =20m 
++ Rds =200e6
++ Cgdmax =6000p 
++ Cgdmin =100p 
++ A =0.25 
++ Cgs =5000p 
++ Cjo =9000p
++ Is =2e-6 
++ Rb =20m 
++ BV =200 
++ IBV =250e-6 
++ NBV =4 
++ TT =260e-9
+
+.MODEL SiA413DJ VDMOS PCHAN 
++ Vds =200 
++ VTO = -4
++ KP =30 
++ Lambda =5m
++ Mtriode =1 
++ Ksubthres =100m 
++ Rs =20m
++ Rd =0
++ Rg = 7
++ Rds =200e6
++ Cgdmax =1800p 
++ Cgdmin =100p 
++ A =1 
++ Cgs =0 
++ Cjo =0
++ Is =2e-6 
++ Rb =0 
++ BV =12 
++ IBV =12 
++ NBV =1 
++ TT =0
+
+.MODEL Q_PMOS PMOS LEVEL=1
++ KP = 100U
++ GAMMA = 0.9
++ Lambda = 0
++ VTO = -1

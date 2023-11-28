@@ -1,0 +1,50 @@
+* KSA1220/KSA1220A PNP EPITAXIAL SILICON TRANSISTOR
+*-----------------------------------------------------------
+* AUDIO FREQUENCY POWER AMPLIFIER
+* HIGH FREQUENCY POWER AMPLIFIER 
+* Complement to KSC2690/KSC2690A
+* PARAMETER MODELS EXTRACTED FROM MEASURED DATA: KSA1220A-Y
+*-----------------------------------------------------------
+* If QCO and RCO are set to zero, this model applies to
+* the Gummel-Poon model LEVEL 1.
+* If IBC and IBE are specified, they are used instead of IS.
+*-----------------------------------------------------------
+.MODEL KSA1220_KSA1220A PNP (            LEVEL=2
++  IS    =4.7863E-13      
++  BF    =289.3
++  NF    =1.0 
++  BR    =9.76
++  NR    =1.006
+*+ IBC   =4.7863E-13
+*+ IBC   =4.7863E-13
++  ISE   =5.2481E-12
++  NE    =2
++  ISC   =2.4909E-11
++  NC    =1.5
++  VAF   =98.5
++  VAR   =6.7
++  IKF   =2.7061
++  IKR   =0.0759
++  RB    =2.26
++  RBM   =0.2308
++  IRB   =0.001
++  RE    =0.1908
++  RC    =1.1748
++  QCO   =0.02
++  RCO   =3.9811
++  VO    =11.078
++  GAMMA =5.01187E-8
++  CJE   =3.4786E-10
++  VJE   =0.9575
++  MJE   =0.4694
++  FC    =0.5
++  CJC   =1.1224E-10
++  VJC   =0.5761
++  MJC   =0.4365
++  XCJC  =0.4955   
++  XTB   =1.7978    
++  EG    =1.2255 
++  XTI   =3.0         )
+*---------------------------------------------------------
+* FAIRCHILD   CASE: TO-126   PID:KSA1220A-Y
+* 2000-03-30 CREATION 

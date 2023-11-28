@@ -1,0 +1,49 @@
+******
+* Spice Model
+* Item: 2N5401
+* Date: 8/25/10
+* Revision History: A
+* ==========================================================
+* This model was developed by: 
+* Central Semiconductor Corp.
+* 145 Adams Avenue
+* Hauppauge, NY 11788
+*
+* These models are subject to change without notice.
+* Users may not directly or indirectly re-sell or 
+* re-distribute this model. This model may not 
+* be modified, or altered without the consent of Central Semiconductor Corp. 
+*
+* For more information on this model contact
+* Central Semiconductor Corp. at:
+* (631) 435-1110 or Engineering@centralsemi.com
+* http://www.centralsemi.com
+* ==========================================================
+******
+*SRC=2N5401;2N5401;BJTs PNP; Si;  160.0V  0.60A  300MHz   Central Semi Central Semi
+.MODEL 2N5401  PNP (
++ IS=20.743E-15
++ BF=516.02
++ VAF=100
++ IKF=.23172
++ ISE=30.077E-15
++ NE=1.2905
++ BR=.1001
++ VAR=100
++ IKR=2.7895
++ ISC=4.1177E-12
++ NC=2.0459
++ NK=.80454
++ RB=1.0110
++ CJE=50.447E-12
++ VJE=.70813
++ MJE=.32821
++ CJC=9.0325E-12
++ VJC=.41518
++ MJC=.33181
++ TF=48.913E-12
++ XTF=57.737
++ VTF=18.593
++ ITF=23.057E-3
++ TR=10.000E-9)
+******

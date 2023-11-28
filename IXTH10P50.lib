@@ -1,0 +1,29 @@
+*DEVICE=IXTH10P50,PMOS
+
+* IXTH10P50 PMOS model
+* updated using Model Editor release 9.2.1 on 10/24/03 at 17:43
+* The Model Editor is a PSpice product hmt.
+*$
+.MODEL IXTH10P50 PMOS
++ LEVEL=3
++ L=2.0000E-6
++ W=35
++ KP=522.45E-9
++ RS=10.000E-3
++ RD=.88276
++ VTO=-5.1807
++ RDS=2.0000E6
++ TOX=2.0000E-6
++ CGSO=285.71E-18
++ CGDO=5.0315E-12
++ CBD=3.6162E-9
++ MJ=.62777
++ PB=.59818
++ RG=10.000E-3
++ IS=170.28E-9
++ N=5
++ RB=1.0000E-9
++ GAMMA=0
++ KAPPA=0
++ UO=300
+*$

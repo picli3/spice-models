@@ -1,0 +1,8 @@
+* Basic RC circuit
+r 1 2 1.0
+c 2 0 1.0
+vin 1 0 dc 0 ac 1 $ <--- the ac source
+.options noacct
+.ac dec 10 .01 10
+.plot ac vdb(2)xlog
+.end

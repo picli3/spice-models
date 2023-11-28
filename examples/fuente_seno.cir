@@ -1,0 +1,9 @@
+.title KiCad schematic
+V3 input GND dc 10 ac 1 sin(0 10 60 0 0)
+R1 input output 10K
+R3 output GND 10K
+.control
+tran 0.1m 100m 0
+plot output
+.endc
+.end

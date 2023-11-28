@@ -1,0 +1,34 @@
+.title KiCad schematic
+.include "/home/maykol/Documentos/spice/TL082.mod"
+.save all
+.probe alli
+.control
+.ac oct 1000 1 40k
+plot abs(v(/VoPB))+abs(v(/VoPA)) abs(v(/VoPA)) abs(v(/VoPB))
+.endc
+
+R11 /VoPA GND 100k
+R1 /VoPB GND 100k
+XU3 GND Net-_U3A--_ +12V -12V /PA/IN TL082
+R14 Net-_U3A--_ /PA/IN 10k
+V1 +12V GND DC 12 
+V2 GND -12V DC 12 
+R12 Net-_R12-Pad1_ Net-_U3A--_ 22k
+R13 Net-_R13-Pad1_ Net-_U3A--_ 22k
+V4 Net-_R13-Pad1_ GND DC 0 SIN( 0 1 1k 0 0 0 1 ) AC 1 
+V3 Net-_R12-Pad1_ GND DC 0 SIN( 0 1 1k 0 0 0 1 ) AC 1 
+XU1 Net-_U1A-+_ Net-_U1A--_ +12V -12V /VoPB TL082
+R4 Net-_U1A--_ GND 4.7k
+R5 /VoPB Net-_U1A--_ 2.7k
+R2 Net-_C2-Pad2_ /PA/IN 2k
+C1 GND Net-_U1A-+_ 47n
+R3 Net-_U1A-+_ Net-_C2-Pad2_ 2k
+C2 /VoPB Net-_C2-Pad2_ 47n
+R10 /VoPA Net-_U2A--_ 10k
+C3 Net-_C3-Pad1_ /PA/IN 47n
+R8 /VoPA Net-_C3-Pad1_ 500
+C4 Net-_U2A-+_ Net-_C3-Pad1_ 47n
+R9 Net-_U2A--_ GND 18k
+XU2 Net-_U2A-+_ Net-_U2A--_ +12V -12V /VoPA TL082
+R7 Net-_U2A-+_ GND 500
+.end

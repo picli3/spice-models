@@ -1,0 +1,372 @@
+* DIODES INCORPORATED AND ITS AFFILIATED COMPANIES AND SUBSIDIARIES (COLLECTIVELY, "DIODES") 
+* PROVIDE THESE SPICE MODELS AND DATA (COLLECTIVELY, THE "SM DATA") "AS IS" AND WITHOUT ANY 
+* REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING ANY WARRANTY OF MERCHANTABILITY 
+* OR FITNESS FOR A PARTICULAR PURPOSE, ANY WARRANTY ARISING FROM COURSE OF DEALING OR COURSE OF 
+* PERFORMANCE, OR ANY WARRANTY THAT ACCESS TO OR OPERATION OF THE SM DATA WILL BE UNINTERRUPTED, 
+* OR THAT THE SM DATA OR ANY SIMULATION USING THE SM DATA WILL BE ERROR FREE. TO THE MAXIMUM 
+* EXTENT PERMITTED BY LAW, IN NO EVENT WILL DIODES BE LIABLE FOR ANY DIRECT OR INDIRECT, 
+* SPECIAL, INCIDENTAL, PUNITIVE OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH 
+* THE PRODUCTION OR USE OF SM DATA, HOWEVER CAUSED AND UNDER WHATEVER CAUSE OF ACTION OR THEORY 
+* OF LIABILITY BROUGHT (INCLUDING, WITHOUT LIMITATION, UNDER ANY CONTRACT, NEGLIGENCE OR OTHER 
+* TORT THEORY OF LIABILITY), EVEN IF DIODES HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, 
+* AND DIODES' TOTAL LIABILITY (WHETHER IN CONTRACT, TORT OR OTHERWISE) WITH REGARD TO THE SM 
+* DATA WILL NOT, IN THE AGGREGATE, EXCEED ANY SUMS PAID BY YOU TO DIODES FOR THE SM DATA.
+
+
+***************************************************************************************************************************************
+*SRC=1N4001G;DI_1N4001G;Diodes;Si;  50.0V  1.00A  2.00us   Diodes Inc. Glass Passivated Rectifier
+.MODEL DI_1N4001G D  ( IS=65.4p RS=42.2m BV=50.0 IBV=5.00u
++ CJO=14.8p  M=0.333 N=1.36 TT=2.88u )
+***************************************************************************************************************************************
+
+
+***************************************************************************************************************************************
+*SRC=1N4002G;DI_1N4002G;Diodes;Si;  100V  1.00A  2.00us   Diodes Inc. Glass Passivated Rectifier
+.MODEL DI_1N4002G D  ( IS=65.4p RS=42.2m BV=100 IBV=5.00u
++ CJO=14.8p  M=0.333 N=1.36 TT=2.88u )
+***************************************************************************************************************************************
+
+
+***************************************************************************************************************************************
+*SRC=1N4003G;DI_1N4003G;Diodes;Si;  200V  1.00A  2.00us   Diodes Inc. Glass Passivated Rectifier
+.MODEL DI_1N4003G D  ( IS=65.4p RS=42.2m BV=200 IBV=5.00u
++ CJO=14.8p  M=0.333 N=1.36 TT=2.88u )
+***************************************************************************************************************************************
+
+
+***************************************************************************************************************************************
+*SRC=1N4004G;DI_1N4004G;Diodes;Si;  400V  1.00A  2.00us   Diodes Inc. Glass Passivated Rectifier
+.MODEL DI_1N4004G D  ( IS=65.4p RS=42.2m BV=400 IBV=5.00u
++ CJO=14.8p  M=0.333 N=1.36 TT=2.88u )
+***************************************************************************************************************************************
+
+
+***************************************************************************************************************************************
+*SRC=1N4005G;DI_1N4005G;Diodes;Si;  600V  1.00A  2.00us   Diodes Inc. Glass Passivated Rectifier
+.MODEL DI_1N4005G D  ( IS=65.4p RS=42.2m BV=600 IBV=5.00u
++ CJO=14.8p  M=0.333 N=1.36 TT=2.88u )
+***************************************************************************************************************************************
+
+
+***************************************************************************************************************************************
+*SRC=1N4006G;DI_1N4006G;Diodes;Si;  800V  1.00A  2.00us   Diodes Inc. Glass Passivated Rectifier
+.MODEL DI_1N4006G D  ( IS=65.4p RS=42.2m BV=800 IBV=5.00u
++ CJO=14.8p  M=0.333 N=1.36 TT=2.88u )
+***************************************************************************************************************************************
+
+
+***************************************************************************************************************************************
+*SRC=1N4007G;DI_1N4007G;Diodes;Si;  1.00kV  1.00A  2.00us   Diodes Inc. Glass Passivated Rectifier
+.MODEL DI_1N4007G D  ( IS=65.4p RS=42.2m BV=1.00k IBV=5.00u
++ CJO=14.8p  M=0.333 N=1.36 TT=2.88u )
+**************************************************************************************************************************************
+
+
+*SRC=DFLR1200;DI_DFLR1200;Diodes;Si;  200V  1.00A  3.00us   Diodes Inc Standard Recovery Rectifier
+.MODEL DI_DFLR1200 D  ( IS=5.90n RS=44.7m BV=200 IBV=3.00u
++ CJO=18.5p  M=0.333 N=1.88 TT=4.32u )
+
+
+*SRC=DFLR1400;DI_DFLR1400;Diodes;Si;  400V  1.00A  3.00us   Diodes Inc Standard Recovery Rectifier
+.MODEL DI_DFLR1400 D  ( IS=5.90n RS=44.7m BV=400 IBV=3.00u
++ CJO=18.5p  M=0.333 N=1.88 TT=4.32u )
+
+
+*SRC=DFLR1600;DI_DFLR1600;Diodes;Si;  600V  1.00A  3.00us   Diodes Inc Standard Recovery Rectifier
+.MODEL DI_DFLR1600 D  ( IS=5.90n RS=44.7m BV=600 IBV=3.00u
++ CJO=18.5p  M=0.333 N=1.88 TT=4.32u )
+
+
+*SRC=PDR3G;DI_PDR3G;Diodes;Si;  400V  3.00A  3.09us   Diodes Inc. Standard Recovery Rectifier
+.MODEL DI_PDR3G D  ( IS=5.82n RS=13.9m BV=400 IBV=10.0u
++ CJO=38.5p  M=0.333 N=1.70 TT=4.45u )
+
+
+*SRC=PDR5G;DI_PDR5G;Diodes;Si;  400V  5.00A  3.32us   Diodes Inc. Standard Recovery Rectifier
+.MODEL DI_PDR5G D  ( IS=8.05n RS=8.40m BV=400 IBV=10.0u
++ CJO=75.6p  M=0.333 N=1.70 TT=4.78u )
+
+
+*SRC=S1A;DI_S1A;Diodes;Si;  50.0V  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1A D  ( IS=7.31e-018 RS=42.0m BV=50.0 IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*SRC=S1AB;DI_S1AB;Diodes;Si;  50.0V  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1AB D  ( IS=7.31e-018 RS=42.0m BV=50.0 IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*SRC=S1B;DI_S1B;Diodes;Si;  100V  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1B D  ( IS=7.31e-018 RS=42.0m BV=100 IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*SRC=S1BB;DI_S1BB;Diodes;Si;  100V  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1BB D  ( IS=7.31e-018 RS=42.0m BV=100 IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*SRC=S1D;DI_S1D;Diodes;Si;  200V  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1D D  ( IS=7.31e-018 RS=42.0m BV=200 IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*SRC=S1DB;DI_S1DB;Diodes;Si;  200V  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1DB D  ( IS=7.31e-018 RS=42.0m BV=200 IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*TITLE=S1G-13-F
+*DATE=19/11/2013
+*ORIGIN=DZSL_DPG_SU
+*SIMULATOR=SIMETRIX
+*VERSION=1
+
+
+
+.model S1G-13-F  D(IS=.0005n RS=0.03 CJO=17p M=0.5 VJ=0.75 N=1.1 IKF=.15 ISR=.01u
++ BV=401 IBV=100u TT=150n EG=.95 TRS1=.1m)
+
+
+
+*                (c)  2013 Diodes Inc
+*
+*   The copyright in these models  and  the designs embodied belong
+*   to Diodes Incorporated (" Zetex ").  They  are  supplied
+*   free of charge by Zetex for the purpose of research and design
+*   and may be used or copied intact  (including this notice)  for
+*   that purpose only.  All other rights are reserved.  The models
+*   are believed accurate but no condition  or warranty  as to their
+*   merchantability or fitness for purpose is given and no liability
+*   in respect of any use is accepted by Diodes Incorporated, its distributors
+*   or agents.
+*
+*   Diodes Zetex Semiconductors Ltd, Zetex Technology Park, Chadderton,
+*   Oldham, United Kingdom, OL9 9LL
+
+
+
+*SRC=S1GB;DI_S1GB;Diodes;Si;  400V  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1GB D  ( IS=7.31e-018 RS=42.0m BV=400 IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*SRC=S1J;DI_S1J;Diodes;Si;  600V  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1J D  ( IS=7.31e-018 RS=42.0m BV=600 IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*SRC=S1JB;DI_S1JB;Diodes;Si;  600V  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1JB D  ( IS=7.31e-018 RS=42.0m BV=600 IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*SRC=S1K;DI_S1K;Diodes;Si;  800V  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1K D  ( IS=7.31e-018 RS=42.0m BV=800 IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*SRC=S1KB;DI_S1KB;Diodes;Si;  800V  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1KB D  ( IS=7.31e-018 RS=42.0m BV=800 IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*SRC=S1M;DI_S1M;Diodes;Si;  1.00kV  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1M D  ( IS=7.31e-018 RS=42.0m BV=1.00k IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*SRC=S1MB;DI_S1MB;Diodes;Si;  1.00kV  1.00A  3.00us   Diodes Inc. Rectifier
+.MODEL DI_S1MB D  ( IS=7.31e-018 RS=42.0m BV=1.00k IBV=5.00u
++ CJO=42.4p  M=0.333 N=0.775 TT=4.32u )
+
+
+*---------- S1MSWFQ Spice Model ----------
+.SUBCKT S1MSWFQ 1 2 
+*     TERMINALS: Anode Cathode
+D1 1 2 
++ D1 
+R1 1 2 3.216E+09 
+.MODEL D1 D 
++ IS = 4.749E-10 N = 1.667  RS = 0.05177 
++ CJO = 1.611E-11  VJ = 0.2047  M = 0.2938 
++ FC = 0.5 
++ BV = 1174  IBV = 4.441E-10 
+.ENDS
+*Diodes_TGI S1MSWFQ Spice Model v1.0 Last Revised 2019/06/12
+
+
+*SRC=S2A;DI_S2A;Diodes;Si;  50.0V  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2A D  ( IS=1.30u RS=8.92m BV=50.0 IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2AA;DI_S2AA;Diodes;Si;  50.0V  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2AA D  ( IS=1.30u RS=8.92m BV=50.0 IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2B;DI_S2B;Diodes;Si;  100V  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2B D  ( IS=1.30u RS=8.92m BV=100 IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2BA;DI_S2BA;Diodes;Si;  100V  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2BA D  ( IS=1.30u RS=8.92m BV=100 IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2D;DI_S2D;Diodes;Si;  200V  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2D D  ( IS=1.30u RS=8.92m BV=200 IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2DA;DI_S2DA;Diodes;Si;  200V  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2DA D  ( IS=1.30u RS=8.92m BV=200 IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2G;DI_S2G;Diodes;Si;  400V  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2G D  ( IS=1.30u RS=8.92m BV=400 IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2GA;DI_S2GA;Diodes;Si;  400V  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2GA D  ( IS=1.30u RS=8.92m BV=400 IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2J;DI_S2J;Diodes;Si;  600V  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2J D  ( IS=1.30u RS=8.92m BV=600 IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2JA;DI_S2JA;Diodes;Si;  600V  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2JA D  ( IS=1.30u RS=8.92m BV=600 IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2K;DI_S2K;Diodes;Si;  800V  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2K D  ( IS=1.30u RS=8.92m BV=800 IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2KA;DI_S2KA;Diodes;Si;  800V  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2KA D  ( IS=1.30u RS=8.92m BV=800 IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2M;DI_S2M;Diodes;Si;  1.00kV  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2M D  ( IS=1.30u RS=8.92m BV=1.00k IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S2MA;DI_S2MA;Diodes;Si;  1.00kV  1.50A  3.00us   Diodes Inc. 
+.MODEL DI_S2MA D  ( IS=1.30u RS=8.92m BV=1.00k IBV=5.00u
++ CJO=37.0p  M=0.333 N=2.58 TT=4.32u )
+
+
+*SRC=S3A;DI_S3A;Diodes;Si;  50.0V  3.00A  3.00us   Diodes Inc. -
+.MODEL DI_S3A D  ( IS=1.37n RS=14.0m BV=50.0 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=4.32u )
+
+
+*SRC=S3A;DI_S3A;Diodes;Si;  50.0V  3.00A  3.00us   Diodes Inc. -
+.MODEL DI_S3A D  ( IS=1.37n RS=14.0m BV=50.0 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=4.32u )
+
+
+*SRC=S3BB;S3BB;Diodes;Si;  100V  3.00A  3.00us   Diodes Inc. -
+.MODEL S3BB D  ( IS=1.37n RS=14.0m BV=100 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=4.32u )
+
+
+*SRC=S3BB;S3BB;Diodes;Si;  100V  3.00A  3.00us   Diodes Inc. -
+.MODEL S3BB D  ( IS=1.37n RS=14.0m BV=100 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=4.32u )
+
+
+*SRC=S3D;DI_S3D;Diodes;Si;  200V  3.00A  3.00us   Diodes Inc. -
+.MODEL DI_S3D D  ( IS=1.37n RS=14.0m BV=200 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=4.32u )
+
+
+*SRC=S3DB;DI_S3DB;Diodes;Si;  200V  3.00A  3.00us   Diodes Inc. -
+.MODEL DI_S3DB D  ( IS=1.37n RS=14.0m BV=200 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=4.32u )
+
+
+*SRC=S3GB;DI_S3GB;Diodes;Si;  400V  3.00A  3.00us   Diodes Inc. -
+.MODEL DI_S3GB D  ( IS=1.37n RS=14.0m BV=400 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=4.32u )
+
+
+*SRC=S3GB;DI_S3GB;Diodes;Si;  400V  3.00A  3.00us   Diodes Inc. -
+.MODEL DI_S3GB D  ( IS=1.37n RS=14.0m BV=400 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=4.32u )
+
+
+*SRC=S3K;DI_S3K;Diodes;Si;  800V  3.00A  3.00us   Diodes Inc. -
+.MODEL DI_S3K D  ( IS=1.37n RS=14.0m BV=800 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=4.32u )
+
+
+*SRC=S3K;DI_S3K;Diodes;Si;  800V  3.00A  3.00us   Diodes Inc. -
+.MODEL DI_S3K D  ( IS=1.37n RS=14.0m BV=800 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=4.32u )
+
+
+*SRC=S3M;DI_S3M;Diodes;Si;  1.00kV  3.00A  3.00us   Diodes Inc. -
+.MODEL DI_S3M D  ( IS=1.37n RS=14.0m BV=1.00k IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=4.32u )
+
+
+*SRC=S3M;DI_S3M;Diodes;Si;  1.00kV  3.00A  3.00us   Diodes Inc. -
+.MODEL DI_S3M D  ( IS=1.37n RS=14.0m BV=1.00k IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=4.32u )
+
+
+*SRC=S5AC;DI_S5AC;Diodes;Si;  50.0V  5.00A  2.00us   Diodes Inc. -
+.MODEL DI_S5AC D  ( IS=2.28n RS=8.40m BV=50.0 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=2.88u )
+
+
+*SRC=S5BC;DI_S5BC;Diodes;Si;  100V  5.00A  2.00us   Diodes Inc. -
+.MODEL DI_S5BC D  ( IS=2.28n RS=8.40m BV=100 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=2.88u )
+
+
+*SRC=S5DC;DI_S5DC;Diodes;Si;  200V  5.00A  2.00us   Diodes Inc. -
+.MODEL DI_S5DC D  ( IS=2.28n RS=8.40m BV=200 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=2.88u )
+
+
+*SRC=S5GC;DI_S5GC;Diodes;Si;  400V  5.00A  2.00us   Diodes Inc. 
+.MODEL DI_S5GC D  ( IS=2.28n RS=8.40m BV=400 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=2.88u )
+
+
+*SRC=S5JC;DI_S5JC;Diodes;Si;  600V  5.00A  2.00us   Diodes Inc. -
+.MODEL DI_S5JC D  ( IS=2.28n RS=8.40m BV=600 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=2.88u )
+
+
+*SRC=S5KC;DI_S5KC;Diodes;Si;  800V  5.00A  2.00us   Diodes Inc. -
+.MODEL DI_S5KC D  ( IS=2.28n RS=8.40m BV=800 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=2.88u )
+
+
+*SRC=S5MC;DI_S5MC;Diodes;Si;  1.00kV  5.00A  2.00us   Diodes Inc. -
+.MODEL DI_S5MC D  ( IS=2.28n RS=8.40m BV=1.00k IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.70 TT=2.88u )
+
+
+*SRC=S8KC;S8KC;Diodes;Si;  800V  8.00A  3.00us   Diodes Inc 
+.MODEL S8KC D  ( IS=777n RS=8.87m BV=800 IBV=10.0u
++ CJO=74.0p  M=0.333 N=1.65 TT=4.32u )
+
+
+*SRC=S8MC;S8MC;Diodes;Si;  1.00kV  8.00A  3.00us   Diodes Inc 
+.MODEL S8MC D  ( IS=777n RS=8.87m BV=1.00k IBV=10.0u
++ CJO=74.0  M=0.333 N=1.65 TT=4.32u

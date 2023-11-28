@@ -1,0 +1,9 @@
+.title KiCad schematic
+.save all
+.probe alli
+.ac oct 1000 1 20k
+R1 vo GND 4
+C1 vo GND 56u
+V2 vi GND DC 0 SIN( 0 1 1k 0 0 0 1 ) AC 1 
+L2 vi vo 1.8m
+.end

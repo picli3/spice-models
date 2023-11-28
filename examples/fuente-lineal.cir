@@ -1,0 +1,21 @@
+.title KiCad schematic
+.model __D2 D
+.model __D4 D
+.model __D1 D
+.model __D3 D
+.save all
+.probe alli
+.tran 1u 20m 0
+.measure tran yavg AVG v(V1i) from=2m to=4m
+.four 100K v(V1i)
+C3 GND Von 10000u
+D2 V2i Vop __D2
+D4 Von V2i __D4
+R2 GND Von 16.3
+C1 Vop GND 10000u
+R1 Vop GND 16.3
+D1 V1i Vop __D1
+D3 Von V1i __D3
+V2 GND V2i DC 0 SIN( 0 50 60 0 0 0 50 ) AC 50
+V1 V1i GND DC 0 SIN( 0 50 60 0 0 0 50 ) AC 50
+.end
