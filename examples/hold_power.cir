@@ -1,0 +1,38 @@
+.title KiCad schematic
+.include "/home/maykol/Documentos/kicad_simulation/spice-models/1N5711WS.lib"
+.include "/home/maykol/Documentos/kicad_simulation/spice-models/FDV301N.lib"
+.include "/home/maykol/Documentos/kicad_simulation/spice-models/FDV304P.mod"
+.include "/home/maykol/Documentos/kicad_simulation/spice-models/LM358.lib"
+.include "/home/maykol/Documentos/kicad_simulation/spice-models/NDS332P.mod"
+.save all
+.probe alli
+.tran 40u 100m 0
+R9 /vo GND 2
+V4 /VCC GND DC 5 
+XQ8 /vo /G_Q8 /voltage_monitor/VSense NDS332P/FAI
+XQ7 /G_Q8 /EN GND FDV301N/FAI
+D1 /IGN Net-_D1-K_ DI_1N5711WS
+D2 /vo Net-_D1-K_ DI_1N5711WS
+V2 /IGN GND PULSE( 0 5 5m 10n 10n 5m 15m ) 
+R6 Net-_D1-K_ /voltage_monitor/_MR 1k
+R8 GND /voltage_monitor/_MR 10k
+V5 /voltage_monitor/VSense GND DC 12 
+R4 /EN GND 100k
+R5 /voltage_monitor/VSense /G_Q8 10k
+C1 /EN GND 10n
+XQ1 /voltage_monitor/AND/nand /voltage_monitor/_MR /VCC FDV304P/FAI
+XQ2 /voltage_monitor/AND/nand /voltage_monitor/_MR Net-_Q2-S_ FDV301N/FAI
+XQ3 Net-_Q2-S_ /voltage_monitor/AND/B GND FDV301N/FAI
+XQ4 /voltage_monitor/AND/nand /voltage_monitor/AND/B /VCC FDV304P/FAI
+XQ5 /voltage_monitor/AND/OUT /voltage_monitor/AND/nand /VCC FDV304P/FAI
+XQ6 /voltage_monitor/AND/OUT /voltage_monitor/AND/nand GND FDV301N/FAI
+R1 /voltage_monitor/VSense /voltage_monitor/vs 10k
+R2 /voltage_monitor/vs GND 4k
+V3 /voltage_monitor/vr GND DC 1.1 
+XU1 /voltage_monitor/vs /voltage_monitor/vr /VCC GND /voltage_monitor/AND/B LM358
+C3 /voltage_monitor/vtime GND 2u
+R10 GND /voltage_monitor/vtime 10k
+R7 /voltage_monitor/AND/OUT /voltage_monitor/vtime 10k
+V6 /voltage_monitor/vrft GND DC 0.8 
+XU2 /voltage_monitor/vtime /voltage_monitor/vrft /VCC GND /EN LM358
+.end
