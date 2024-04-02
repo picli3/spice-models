@@ -3,7 +3,7 @@
 .save all
 .probe alli
 .control
-.ac oct 1000 1 40k
+ac oct 1000 1 40k
 plot abs(v(/VoPB))+abs(v(/VoPA)) abs(v(/VoPA)) abs(v(/VoPB))
 .endc
 

@@ -1,0 +1,29 @@
+.title KiCad schematic
+.include "/home/maykol/Descargas/2n3904.lib"
+.save all
+.probe alli
+.probe p(I1)
+.probe p(V1)
+.probe p(Q1)
+.probe p(R1)
+.probe p(R3)
+.probe p(R4)
+.probe p(R5)
+.probe p(R2)
+//.op
+//.print all
+
+I1 GND Net-_I1-Pad2_ DC 1 
+V1 Net-_R1-Pad2_ GND DC 50 
+Q1 Net-_Q1-C_ Net-_Q1-B_ GND 2N3904
+R1 /VCE Net-_R1-Pad2_ 200
+R3 /Vi GND 100k
+R4 /Vi Net-_Q1-B_ 0
+R5 Net-_Q1-C_ /VCE 0
+R2 /Vi Net-_I1-Pad2_ 200k
+
+.control
+dc V1 0 50 500m I1 1m 500m 1m
+plot -i(r5) vs v(/vce)
+.endc
+.end
